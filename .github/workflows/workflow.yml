@@ -1,0 +1,22 @@
+name: Simple Workflow
+
+# Trigger this workflow on push to any branch
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  simple-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Run a simple command
+      run: echo "Hello, DevOps World!"
+
+    - name: Check Workflow Success
+      run: echo "The workflow passed successfully!"
+
